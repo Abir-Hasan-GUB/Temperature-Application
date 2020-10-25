@@ -38,17 +38,7 @@
 
 
     <script>
-        // current temperature in dhaka
-
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=dhaka&appid=af2447bfca572fc32c58d31e4f1dba2d`)
-            .then(res => res.json())
-            .then(data => {
-                document.getElementById('city').innerText = data.name;
-                document.getElementById('temperature').innerText = (data.main.temp / 10).toFixed(2);
-                document.getElementById('weatherMessage').innerText = data.weather[0].main;
-                document.getElementById('icon').setAttribute('src', `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`);
-            })
-
+       
         // coustom search handle 
         function handleWeather() {
             var cityName = document.getElementById('cityName').value;
